@@ -1,5 +1,8 @@
+import 'package:daysofcode/day%201/travel_detail.dart';
 import 'package:flutter/material.dart';
 import 'package:vertical_card_pager/vertical_card_pager.dart';
+
+import 'travel_db.dart';
 
 class TravelDiscover extends StatefulWidget {
   const TravelDiscover({super.key});
@@ -180,8 +183,16 @@ class _TravelDiscoverState extends State<TravelDiscover> {
                 ),
                 titles: titles,
                 images: images,
+                initialPage: 2,
                 onPageChanged: (page) {},
-                onSelectedItem: (index) {},
+                onSelectedItem: (index) {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => TravelDetail(
+                                Travel: travelMap[titles[index]],
+                              )));
+                },
               ),
             ))
           ],
