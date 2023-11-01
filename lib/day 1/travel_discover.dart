@@ -18,23 +18,26 @@ final List<String> titles = [
 ];
 
 final List<Widget> images = [
-  ClipRRect(
-    borderRadius: BorderRadius.circular(30.0),
-    child: Container(
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(20),
-        image: const DecorationImage(
-            image: AssetImage(
-              'assets/travel_ui/sydney/main.jpg',
-            ),
-            fit: BoxFit.cover),
-      ),
+  Hero(
+    tag: 'SYDNEY',
+    child: ClipRRect(
+      borderRadius: BorderRadius.circular(30.0),
       child: Container(
-        decoration: const BoxDecoration(
-            gradient: LinearGradient(colors: [
-          Color(0xff242121),
-          Color(0x005b5252),
-        ], begin: Alignment(0.01, -1.00), end: Alignment(-0.01, 1))),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(20),
+          image: const DecorationImage(
+              image: AssetImage(
+                'assets/travel_ui/sydney/main.jpg',
+              ),
+              fit: BoxFit.cover),
+        ),
+        child: Container(
+          decoration: const BoxDecoration(
+              gradient: LinearGradient(colors: [
+            Color(0xff242121),
+            Color(0x005b5252),
+          ], begin: Alignment(0.01, -1.00), end: Alignment(-0.01, 1))),
+        ),
       ),
     ),
   ),
