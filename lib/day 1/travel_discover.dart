@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:vertical_card_pager/vertical_card_pager.dart';
 
 class TravelDiscover extends StatefulWidget {
   const TravelDiscover({super.key});
@@ -12,33 +13,159 @@ final List<String> titles = [
   'RIO',
   'CARIO',
   'TOKYO',
-  'Bahamas',
-  'Rome',
+  'BAHAMAS',
+  'ROME',
 ];
 
 final List<Widget> images = [
   ClipRRect(
-      borderRadius: BorderRadius.circular(20.0),
+    borderRadius: BorderRadius.circular(30.0),
+    child: Container(
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(20),
+        image: const DecorationImage(
+            image: AssetImage(
+              'assets/travel_ui/sydney/main.jpg',
+            ),
+            fit: BoxFit.cover),
+      ),
       child: Container(
-          decoration: BoxDecoration(
-              image: DecorationImage(image: AssetImage('assets/')))))
+        decoration: const BoxDecoration(
+            gradient: LinearGradient(colors: [
+          Color(0xff242121),
+          Color(0x005b5252),
+        ], begin: Alignment(0.01, -1.00), end: Alignment(-0.01, 1))),
+      ),
+    ),
+  ),
+  ClipRRect(
+    borderRadius: BorderRadius.circular(30.0),
+    child: Container(
+      decoration: const BoxDecoration(
+        image: DecorationImage(
+            image: AssetImage(
+              'assets/travel_ui/rio.jpg',
+            ),
+            fit: BoxFit.cover),
+      ),
+      child: Container(
+        decoration: const BoxDecoration(
+            gradient: LinearGradient(colors: [
+          Color(0xff242121),
+          Color(0x005b5252),
+        ], begin: Alignment(0.01, -1.00), end: Alignment(-0.01, 1))),
+      ),
+    ),
+  ),
+  ClipRRect(
+    borderRadius: BorderRadius.circular(30.0),
+    child: Container(
+      decoration: const BoxDecoration(
+        image: DecorationImage(
+            image: AssetImage(
+              'assets/travel_ui/cario.png',
+            ),
+            fit: BoxFit.cover),
+      ),
+      child: Container(
+        decoration: const BoxDecoration(
+            gradient: LinearGradient(colors: [
+          Color(0xff242121),
+          Color(0x005b5252),
+        ], begin: Alignment(0.01, -1.00), end: Alignment(-0.01, 1))),
+      ),
+    ),
+  ),
+  ClipRRect(
+    borderRadius: BorderRadius.circular(30.0),
+    child: Container(
+      decoration: const BoxDecoration(
+        image: DecorationImage(
+            image: AssetImage(
+              'assets/travel_ui/tokyo.jpg',
+            ),
+            fit: BoxFit.cover),
+      ),
+      child: Container(
+        decoration: const BoxDecoration(
+            gradient: LinearGradient(colors: [
+          Color(0xff242121),
+          Color(0x005b5252),
+        ], begin: Alignment(0.01, -1.00), end: Alignment(-0.01, 1))),
+      ),
+    ),
+  ),
+  ClipRRect(
+    borderRadius: BorderRadius.circular(30.0),
+    child: Container(
+      decoration: const BoxDecoration(
+        image: DecorationImage(
+            image: AssetImage(
+              'assets/travel_ui/bahamas.jpg',
+            ),
+            fit: BoxFit.cover),
+      ),
+      child: Container(
+        decoration: const BoxDecoration(
+            gradient: LinearGradient(colors: [
+          Color(0xff242121),
+          Color(0x005b5252),
+        ], begin: Alignment(0.01, -1.00), end: Alignment(-0.01, 1))),
+      ),
+    ),
+  ),
+  ClipRRect(
+    borderRadius: BorderRadius.circular(30.0),
+    child: Container(
+      decoration: const BoxDecoration(
+        image: DecorationImage(
+            image: AssetImage(
+              'assets/travel_ui/rome.jpg',
+            ),
+            fit: BoxFit.cover),
+      ),
+      child: Container(
+        decoration: const BoxDecoration(
+            gradient: LinearGradient(colors: [
+          Color(0xff242121),
+          Color(0x005b5252),
+        ], begin: Alignment(0.01, -1.00), end: Alignment(-0.01, 1))),
+      ),
+    ),
+  ),
 ];
 
 class _TravelDiscoverState extends State<TravelDiscover> {
   @override
   Widget build(BuildContext context) {
-    return const SafeArea(
+    return SafeArea(
         child: Scaffold(
       body: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 60.0, vertical: 30),
+        padding: const EdgeInsets.symmetric(horizontal: 60.0, vertical: 30),
         child: Column(
           children: [
-            Text(
+            const Text(
               'Discover',
               style: TextStyle(fontWeight: FontWeight.w700, fontSize: 24),
             ),
-            Text(
-                'One\'s destination is never a place, but \n   always a new way of seeing things.')
+            const Text(
+                'One\'s destination is never a place, but \n   always a new way of seeing things.'),
+            Expanded(
+                child: Container(
+              padding: const EdgeInsets.all(10.0),
+              child: VerticalCardPager(
+                textStyle: const TextStyle(
+                  color: Colors.white,
+                  fontSize: 12,
+                  fontWeight: FontWeight.w700,
+                  fontFamily: 'Inter',
+                ),
+                titles: titles,
+                images: images,
+                onPageChanged: (page) {},
+                onSelectedItem: (index) {},
+              ),
+            ))
           ],
         ),
       ),

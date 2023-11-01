@@ -57,6 +57,12 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/travel_ui/1.jpg
+    - assets/travel_ui/sydney/main.jpg
+    - assets/travel_ui/bahamas.jpg
+    - assets/travel_ui/cario.png
+    - assets/travel_ui/rio.jpg
+    - assets/travel_ui/rome.jpg
+    - assets/travel_ui/tokyo.jpg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
   # For details regarding adding assets from package dependencies, see
