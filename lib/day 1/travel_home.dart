@@ -1,3 +1,4 @@
+import 'package:daysofcode/day%201/travel_discover.dart';
 import 'package:flutter/material.dart';
 
 class TravelHome extends StatelessWidget {
@@ -71,7 +72,10 @@ class TravelHome extends StatelessWidget {
           left: 71,
           top: 670,
           child: GestureDetector(
-            onTap: () {},
+            onTap: () {
+              Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => TravelDiscover()));
+            },
             child: Container(
               width: 242,
               height: 60,
