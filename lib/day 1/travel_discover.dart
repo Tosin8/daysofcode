@@ -17,9 +17,11 @@ final List<String> titles = [
 ];
 
 final List<Widget> images = [
-  ClipRect(
-    borderRadius: BorderRadius.circular(20.0),
-  )
+  ClipRRect(
+      borderRadius: BorderRadius.circular(20.0),
+      child: Container(
+          decoration: BoxDecoration(
+              image: DecorationImage(image: AssetImage('assets/')))))
 ];
 
 class _TravelDiscoverState extends State<TravelDiscover> {
