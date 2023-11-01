@@ -7,6 +7,21 @@ class TravelDiscover extends StatefulWidget {
   State<TravelDiscover> createState() => _TravelDiscoverState();
 }
 
+final List<String> titles = [
+  'SYDNEY',
+  'RIO',
+  'CARIO',
+  'TOKYO',
+  'Bahamas',
+  'Rome',
+];
+
+final List<Widget> images = [
+  ClipRect(
+    borderRadius: BorderRadius.circular(20.0),
+  )
+];
+
 class _TravelDiscoverState extends State<TravelDiscover> {
   @override
   Widget build(BuildContext context) {
@@ -21,7 +36,7 @@ class _TravelDiscoverState extends State<TravelDiscover> {
               style: TextStyle(fontWeight: FontWeight.w700, fontSize: 24),
             ),
             Text(
-                'One\'s destination is never a place, but \nalways a new way of seeing things.')
+                'One\'s destination is never a place, but \n   always a new way of seeing things.')
           ],
         ),
       ),
