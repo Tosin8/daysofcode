@@ -1,3 +1,4 @@
+import 'package:daysofcode/day%202/interior_home.dart';
 import 'package:flutter/material.dart';
 
 import 'day 1/travel_home.dart';
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const TravelHome(),
+      home: const InteriorHome(),
     );
   }
 }
