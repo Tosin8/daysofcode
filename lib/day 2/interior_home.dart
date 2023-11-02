@@ -134,8 +134,10 @@ class _InteriorHomeState extends State<InteriorHome> {
                                     Transform.translate(
                                       offset: const Offset(50, -40),
                                       child: Container(
+                                          width: 30,
+                                          height: 30,
                                           margin: const EdgeInsets.symmetric(
-                                              horizontal: 65, vertical: 63),
+                                              horizontal: 65, vertical: 56),
                                           decoration: BoxDecoration(
                                             borderRadius:
                                                 BorderRadius.circular(10),
@@ -147,7 +149,7 @@ class _InteriorHomeState extends State<InteriorHome> {
                                     ),
                                     Positioned(
                                         left: 18,
-                                        top: 127,
+                                        top: 120,
                                         child: Row(
                                           children: [
                                             const Text(
@@ -157,9 +159,9 @@ class _InteriorHomeState extends State<InteriorHome> {
                                                   fontSize: 14,
                                                   fontWeight: FontWeight.w500),
                                             ),
-                                            SizedBox(width: 20),
+                                            SizedBox(width: 10),
                                             Container(
-                                              width: 60,
+                                              width: 70,
                                               height: 26,
                                               decoration: BoxDecoration(
                                                 color: Colors.white,
