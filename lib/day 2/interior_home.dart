@@ -60,14 +60,23 @@ class InteriorHome extends StatelessWidget {
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Text(
+                        const Text(
                           'Perfecting Your Home',
                           style: TextStyle(
                               color: Colors.white,
                               fontSize: 24,
                               fontWeight: FontWeight.w700),
                         ),
-                        Container(),
+                        SizedBox(height: 20),
+                        Container(
+                          width: 193,
+                          height: 59,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20),
+                            color: Colors.white,
+                          ),
+                          child: Center(child: Text('Shop Now')),
+                        ),
                       ],
                     ),
                   ),
