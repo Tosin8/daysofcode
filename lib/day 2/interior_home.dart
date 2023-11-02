@@ -20,10 +20,17 @@ class _InteriorHomeState extends State<InteriorHome> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+          backgroundColor: Colors.grey[500],
           drawer: const Drawer(),
           appBar: AppBar(
-            title: const Text('Home'),
+            iconTheme: const IconThemeData(
+                color: Colors.white), // to change color of drawer to white.
+            title: const Text(
+              'Home',
+              style: TextStyle(color: Colors.white),
+            ),
             centerTitle: true,
+            // elevation: 0,
             backgroundColor: Colors.transparent,
             actions: [
               Padding(
@@ -38,13 +45,15 @@ class _InteriorHomeState extends State<InteriorHome> {
                   child: const Center(
                       child: Text(
                     '0',
-                    style: TextStyle(fontWeight: FontWeight.w700),
+                    style: TextStyle(
+                      fontWeight: FontWeight.w700,
+                    ),
                   )),
                 ),
               )
             ],
           ),
-          body: SingleChildScrollView(
+          body: Container(
             padding: const EdgeInsets.all(20.0),
             child: Column(
               children: [
@@ -99,11 +108,81 @@ class _InteriorHomeState extends State<InteriorHome> {
                             )),
                           ),
                         ),
-                        SizedBox(height: 20),
+                        const SizedBox(height: 20),
                       ],
                     ),
                   ),
                 ),
+                const SizedBox(height: 20),
+                Expanded(
+                  child: GridView.count(
+                    crossAxisCount: 2,
+                    mainAxisSpacing: 10,
+                    crossAxisSpacing: 10,
+                    padding: const EdgeInsets.all(8),
+                    children: _listItem
+                        .map((item) => Card(
+                              color: Colors.transparent,
+                              elevation: 0,
+                              child: Container(
+                                  decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(20),
+                                      image: DecorationImage(
+                                          image: AssetImage(item),
+                                          fit: BoxFit.cover)),
+                                  child: Stack(children: [
+                                    Transform.translate(
+                                      offset: const Offset(50, -40),
+                                      child: Container(
+                                          margin: const EdgeInsets.symmetric(
+                                              horizontal: 65, vertical: 63),
+                                          decoration: BoxDecoration(
+                                            borderRadius:
+                                                BorderRadius.circular(10),
+                                            color: Colors.white,
+                                          ),
+                                          child: const Icon(
+                                              Icons.favorite_border,
+                                              size: 15)),
+                                    ),
+                                    Positioned(
+                                        left: 18,
+                                        top: 127,
+                                        child: Row(
+                                          children: [
+                                            const Text(
+                                              '\$30.00',
+                                              style: TextStyle(
+                                                  color: Colors.white,
+                                                  fontSize: 14,
+                                                  fontWeight: FontWeight.w500),
+                                            ),
+                                            SizedBox(width: 20),
+                                            Container(
+                                              width: 60,
+                                              height: 26,
+                                              decoration: BoxDecoration(
+                                                color: Colors.white,
+                                                borderRadius:
+                                                    BorderRadius.circular(10),
+                                              ),
+                                              child: Center(
+                                                child: Text(
+                                                  'Add To Cart',
+                                                  style: TextStyle(
+                                                      fontSize: 10,
+                                                      fontWeight:
+                                                          FontWeight.w400),
+                                                ),
+                                              ),
+                                            )
+                                          ],
+                                        ))
+                                  ])),
+                            ))
+                        .toList(),
+                  ),
+                )
               ],
             ),
           )),
