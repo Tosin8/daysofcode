@@ -71,6 +71,7 @@ flutter:
     - assets/interior_app/6.jpg
     - assets/interior_app/drawer_header.jpg
     - assets/interior_app/header.jpg
+    - assets/interior_app/model.jpg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
   # For details regarding adding assets from package dependencies, see

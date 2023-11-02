@@ -21,7 +21,121 @@ class _InteriorHomeState extends State<InteriorHome> {
     return SafeArea(
       child: Scaffold(
           backgroundColor: Colors.grey[500],
-          drawer: const Drawer(),
+          drawer: Drawer(
+              child: ListView(
+            padding: EdgeInsets.zero,
+            children: [
+              const DrawerHeader(
+                  decoration: BoxDecoration(
+                      image: DecorationImage(
+                    image: AssetImage('assets/interior_app/drawer_header.jpg'),
+                    fit: BoxFit.cover,
+                  )),
+                  child: Center(
+                      child: Text(
+                    'House Paradise',
+                    style: TextStyle(
+                        color: Colors.white, fontWeight: FontWeight.w700),
+                  ))),
+              // Stack(
+              //   children: [
+              //     Positioned(
+              //       left: -9,
+              //       top: -35,
+              //       child: CircleAvatar(
+              //         radius: 45,
+              //         backgroundImage:
+              //             AssetImage('assets/interior_app/model.jpg'),
+              //       ),
+              //     )
+              //   ],
+              // ),
+              const Padding(
+                padding: EdgeInsets.only(left: 20),
+                child: Text(
+                  'My Account',
+                  style: TextStyle(
+                      color: Color(0xff0038ff),
+                      fontSize: 16,
+                      fontWeight: FontWeight.w400),
+                ),
+              ),
+              ListTile(
+                title: const Text('Orders'),
+                leading: const Icon(Icons.abc),
+                onTap: () {},
+              ),
+              ListTile(
+                title: const Text('Inbox'),
+                leading: const Icon(Icons.abc),
+                onTap: () {},
+              ),
+              ListTile(
+                title: const Text('Pending Reviews'),
+                leading: const Icon(Icons.abc),
+                onTap: () {},
+              ),
+              ListTile(
+                title: const Text('Voucher'),
+                leading: const Icon(Icons.abc),
+                onTap: () {},
+              ),
+              ListTile(
+                title: const Text('Saved Items'),
+                leading: const Icon(Icons.abc),
+                onTap: () {},
+              ),
+              SizedBox(height: 10),
+              const Padding(
+                padding: EdgeInsets.only(left: 20),
+                child: Text(
+                  'Categories',
+                  style: TextStyle(
+                      color: Color(0xff0038ff),
+                      fontSize: 16,
+                      fontWeight: FontWeight.w400),
+                ),
+              ),
+              ListTile(
+                title: const Text('Furniture'),
+                leading: const Icon(Icons.abc),
+                onTap: () {},
+              ),
+              ListTile(
+                title: const Text('Lightening'),
+                leading: const Icon(Icons.abc),
+                onTap: () {},
+              ),
+              ListTile(
+                title: const Text('Kitchen'),
+                leading: const Icon(Icons.abc),
+                onTap: () {},
+              ),
+              ListTile(
+                title: const Text('Bed Room'),
+                leading: const Icon(Icons.abc),
+                onTap: () {},
+              ),
+              SizedBox(height: 10),
+              Divider(),
+              SizedBox(height: 10),
+              ListTile(
+                title: const Text('Customer Care'),
+                leading: const Icon(Icons.abc),
+                onTap: () {},
+              ),
+              ListTile(
+                title: const Text('Settings'),
+                leading: const Icon(Icons.abc),
+                onTap: () {},
+              ),
+              ListTile(
+                title: const Text('Self Service'),
+                leading: const Icon(Icons.abc),
+                onTap: () {},
+              ),
+            ],
+          )),
           appBar: AppBar(
             iconTheme: const IconThemeData(
                 color: Colors.white), // to change color of drawer to white.
@@ -159,7 +273,7 @@ class _InteriorHomeState extends State<InteriorHome> {
                                                   fontSize: 14,
                                                   fontWeight: FontWeight.w500),
                                             ),
-                                            SizedBox(width: 10),
+                                            const SizedBox(width: 10),
                                             Container(
                                               width: 70,
                                               height: 26,
@@ -168,7 +282,7 @@ class _InteriorHomeState extends State<InteriorHome> {
                                                 borderRadius:
                                                     BorderRadius.circular(10),
                                               ),
-                                              child: Center(
+                                              child: const Center(
                                                 child: Text(
                                                   'Add To Cart',
                                                   style: TextStyle(
