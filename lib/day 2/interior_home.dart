@@ -8,6 +8,14 @@ class InteriorHome extends StatefulWidget {
 }
 
 class _InteriorHomeState extends State<InteriorHome> {
+  final List<String> _listItem = [
+    'assets/interior_app/1.jpg',
+    'assets/interior_app/2.jpg',
+    'assets/interior_app/3.jpg',
+    'assets/interior_app/4.jpg',
+    'assets/interior_app/5.jpg',
+    'assets/interior_app/6.jpg'
+  ];
   @override
   Widget build(BuildContext context) {
     return SafeArea(
