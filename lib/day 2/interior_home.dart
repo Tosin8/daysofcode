@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
 
-class InteriorHome extends StatelessWidget {
+class InteriorHome extends StatefulWidget {
   const InteriorHome({super.key});
 
+  @override
+  State<InteriorHome> createState() => _InteriorHomeState();
+}
+
+class _InteriorHomeState extends State<InteriorHome> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
