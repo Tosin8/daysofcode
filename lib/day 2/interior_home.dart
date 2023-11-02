@@ -58,7 +58,7 @@ class InteriorHome extends StatelessWidget {
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(20))),
                     child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.end,
                       children: [
                         const Text(
                           'Perfecting Your Home',
@@ -67,16 +67,26 @@ class InteriorHome extends StatelessWidget {
                               fontSize: 24,
                               fontWeight: FontWeight.w700),
                         ),
-                        SizedBox(height: 20),
-                        Container(
-                          width: 193,
-                          height: 59,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(20),
-                            color: Colors.white,
+                        const SizedBox(height: 20),
+                        GestureDetector(
+                          onTap: () {},
+                          child: Container(
+                            width: 193,
+                            height: 59,
+                            margin: const EdgeInsets.symmetric(horizontal: 40),
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(20),
+                                color: const Color(0xffe4dada)),
+                            child: const Center(
+                                child: Text(
+                              'Shop Now',
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.w500),
+                            )),
                           ),
-                          child: Center(child: Text('Shop Now')),
                         ),
+                        SizedBox(height: 20),
                       ],
                     ),
                   ),
