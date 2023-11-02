@@ -37,19 +37,6 @@ class _InteriorHomeState extends State<InteriorHome> {
                     style: TextStyle(
                         color: Colors.white, fontWeight: FontWeight.w700),
                   ))),
-              // Stack(
-              //   children: [
-              //     Positioned(
-              //       left: -9,
-              //       top: -35,
-              //       child: CircleAvatar(
-              //         radius: 45,
-              //         backgroundImage:
-              //             AssetImage('assets/interior_app/model.jpg'),
-              //       ),
-              //     )
-              //   ],
-              // ),
               const Padding(
                 padding: EdgeInsets.only(left: 20),
                 child: Text(
@@ -62,27 +49,30 @@ class _InteriorHomeState extends State<InteriorHome> {
               ),
               ListTile(
                 title: const Text('Orders'),
-                leading: const Icon(Icons.abc),
+                leading: Image.asset(
+                    'assets/interior_app/icons/shopping-bag-20.png'),
                 onTap: () {},
               ),
               ListTile(
                 title: const Text('Inbox'),
-                leading: const Icon(Icons.abc),
+                leading: Image.asset('assets/interior_app/icons/inbox-20.png'),
                 onTap: () {},
               ),
               ListTile(
                 title: const Text('Pending Reviews'),
-                leading: const Icon(Icons.abc),
+                leading:
+                    Image.asset('assets/interior_app/icons/pending-20.png'),
                 onTap: () {},
               ),
               ListTile(
                 title: const Text('Voucher'),
-                leading: const Icon(Icons.abc),
+                leading: Image.asset('assets/interior_app/icons/coupon-20.png'),
                 onTap: () {},
               ),
               ListTile(
                 title: const Text('Saved Items'),
-                leading: const Icon(Icons.abc),
+                leading: Image.asset(
+                    'assets/interior_app/icons/save-instagram-20.png'),
                 onTap: () {},
               ),
               SizedBox(height: 10),
@@ -98,22 +88,24 @@ class _InteriorHomeState extends State<InteriorHome> {
               ),
               ListTile(
                 title: const Text('Furniture'),
-                leading: const Icon(Icons.abc),
+                leading:
+                    Image.asset('assets/interior_app/icons/armchair-20.png'),
                 onTap: () {},
               ),
               ListTile(
                 title: const Text('Lightening'),
-                leading: const Icon(Icons.abc),
+                leading: Image.asset('assets/interior_app/icons/light-20.png'),
                 onTap: () {},
               ),
               ListTile(
                 title: const Text('Kitchen'),
-                leading: const Icon(Icons.abc),
+                leading:
+                    Image.asset('assets/interior_app/icons/cabinet-20.png'),
                 onTap: () {},
               ),
               ListTile(
                 title: const Text('Bed Room'),
-                leading: const Icon(Icons.abc),
+                leading: Image.asset('assets/interior_app/icons/bed-20.png'),
                 onTap: () {},
               ),
               SizedBox(height: 10),
@@ -121,17 +113,20 @@ class _InteriorHomeState extends State<InteriorHome> {
               SizedBox(height: 10),
               ListTile(
                 title: const Text('Customer Care'),
-                leading: const Icon(Icons.abc),
+                leading: Image.asset(
+                    'assets/interior_app/icons/customer-care-20.png'),
                 onTap: () {},
               ),
               ListTile(
                 title: const Text('Settings'),
-                leading: const Icon(Icons.abc),
+                leading:
+                    Image.asset('assets/interior_app/icons/settings-20.png'),
                 onTap: () {},
               ),
               ListTile(
                 title: const Text('Self Service'),
-                leading: const Icon(Icons.abc),
+                leading: Image.asset(
+                    'assets/interior_app/icons/self-service-20.png'),
                 onTap: () {},
               ),
             ],
@@ -140,7 +135,7 @@ class _InteriorHomeState extends State<InteriorHome> {
             iconTheme: const IconThemeData(
                 color: Colors.white), // to change color of drawer to white.
             title: const Text(
-              'Home',
+              'Furniture',
               style: TextStyle(color: Colors.white),
             ),
             centerTitle: true,
