@@ -4,7 +4,9 @@ class Travel {
   final String description;
 
   const Travel(
-      {required this.titles, required this.location, required this.description});
+      {required this.titles,
+      required this.location,
+      required this.description});
 }
 
 final travelMap = {
