@@ -70,12 +70,15 @@ class TravelUI extends StatelessWidget {
                             fontSize: 20,
                             fontWeight: FontWeight.bold),
                       ),
-                      const SizedBox(height: 20),
-                      SizedBox(
+                      Container(
                         height: 200,
                         child: ListView(
                           scrollDirection: Axis.horizontal,
-                          children: const [],
+                          children: [
+                            carousel(image: 'assets/travel_ui/rome.jpg'),
+                            carousel(image: 'assets/travel_ui/rio.jpg'),
+                            carousel(image: 'assets/travel_ui/tokyo.jpg'),
+                          ],
                         ),
                       )
                     ],
@@ -90,6 +93,15 @@ class TravelUI extends StatelessWidget {
   }
 
   Widget carousel({image}) {
-    return const AspectRatio(aspectRatio: 1 / 1);
+    return AspectRatio(
+      aspectRatio: 1 / 1,
+      child: Container(
+        margin: const EdgeInsets.only(right: 10),
+        decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(30),
+            image:
+                DecorationImage(image: AssetImage(image), fit: BoxFit.cover)),
+      ),
+    );
   }
 }
