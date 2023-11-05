@@ -63,6 +63,7 @@ flutter:
     - assets/travel_ui/rio.jpg
     - assets/travel_ui/rome.jpg
     - assets/travel_ui/tokyo.jpg
+    - assets/travel_ui/header.jpg
     - assets/interior_app/1.jpg
     - assets/interior_app/2.jpg
     - assets/interior_app/3.jpg
