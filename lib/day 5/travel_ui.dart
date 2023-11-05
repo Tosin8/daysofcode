@@ -75,49 +75,21 @@ class TravelUI extends StatelessWidget {
                         height: 200,
                         child: ListView(
                           scrollDirection: Axis.horizontal,
-                          children: const [
-                            bestdestination(
-                              image: 'Assets/travel_ui/cario.png',
-                            ),
-                            bestdestination(
-                              image: 'Assets/travel_ui/cario.png',
-                            ),
-                            bestdestination(
-                              image: 'Assets/travel_ui/cario.png',
-                            ),
-                          ],
+                          children: const [],
                         ),
                       )
                     ],
                   ),
                 ),
-              )
+              ),
+              const SizedBox(height: 20),
+              const Text('Favorites'),
             ],
           ),
         ));
   }
-}
 
-// ignore: camel_case_types
-class bestdestination extends StatelessWidget {
-  const bestdestination({
-    super.key,
-    required this.image,
-  });
-
-  final String image;
-  @override
-  Widget build(BuildContext context) {
-    return AspectRatio(
-      aspectRatio: 1 / 1,
-      child: Container(
-        decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(20),
-            image: DecorationImage(
-              image: AssetImage(image),
-              fit: BoxFit.cover,
-            )),
-      ),
-    );
+  Widget carousel({image}) {
+    return const AspectRatio(aspectRatio: 1 / 1);
   }
 }
