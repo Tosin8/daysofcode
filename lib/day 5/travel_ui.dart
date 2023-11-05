@@ -59,7 +59,7 @@ class TravelUI extends StatelessWidget {
               const SizedBox(height: 20),
               Container(
                 child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -70,6 +70,24 @@ class TravelUI extends StatelessWidget {
                             fontSize: 20,
                             fontWeight: FontWeight.bold),
                       ),
+                      const SizedBox(height: 20),
+                      SizedBox(
+                        height: 200,
+                        child: ListView(
+                          scrollDirection: Axis.horizontal,
+                          children: const [
+                            bestdestination(
+                              image: 'Assets/travel_ui/cario.png',
+                            ),
+                            bestdestination(
+                              image: 'Assets/travel_ui/cario.png',
+                            ),
+                            bestdestination(
+                              image: 'Assets/travel_ui/cario.png',
+                            ),
+                          ],
+                        ),
+                      )
                     ],
                   ),
                 ),
@@ -77,5 +95,29 @@ class TravelUI extends StatelessWidget {
             ],
           ),
         ));
+  }
+}
+
+// ignore: camel_case_types
+class bestdestination extends StatelessWidget {
+  const bestdestination({
+    super.key,
+    required this.image,
+  });
+
+  final String image;
+  @override
+  Widget build(BuildContext context) {
+    return AspectRatio(
+      aspectRatio: 1 / 1,
+      child: Container(
+        decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(20),
+            image: DecorationImage(
+              image: AssetImage(image),
+              fit: BoxFit.cover,
+            )),
+      ),
+    );
   }
 }
