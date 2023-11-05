@@ -75,9 +75,15 @@ class TravelUI extends StatelessWidget {
                         child: ListView(
                           scrollDirection: Axis.horizontal,
                           children: [
-                            carousel(image: 'assets/travel_ui/rome.jpg'),
-                            carousel(image: 'assets/travel_ui/rio.jpg'),
-                            carousel(image: 'assets/travel_ui/tokyo.jpg'),
+                            carousel(
+                                image: 'assets/travel_ui/rome.jpg',
+                                title: 'Travel'),
+                            carousel(
+                                image: 'assets/travel_ui/rio.jpg',
+                                title: 'Travel'),
+                            carousel(
+                                image: 'assets/travel_ui/tokyo.jpg',
+                                title: 'Travel'),
                           ],
                         ),
                       )
@@ -92,16 +98,32 @@ class TravelUI extends StatelessWidget {
         ));
   }
 
-  Widget carousel({image}) {
+  Widget carousel({image, title}) {
     return AspectRatio(
       aspectRatio: 1 / 1,
       child: Container(
-        margin: const EdgeInsets.only(right: 10),
-        decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(30),
-            image:
-                DecorationImage(image: AssetImage(image), fit: BoxFit.cover)),
-      ),
+          margin: const EdgeInsets.only(right: 10),
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(30),
+              image:
+                  DecorationImage(image: AssetImage(image), fit: BoxFit.cover)),
+          child: Container(
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(30),
+                gradient: LinearGradient(colors: [
+                  Colors.black.withOpacity(.8),
+                  Colors.black.withOpacity(.2),
+                ], begin: Alignment.bottomRight)),
+            child: Center(
+              child: Text(
+                title,
+                style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 20),
+              ),
+            ),
+          )),
     );
   }
 }
