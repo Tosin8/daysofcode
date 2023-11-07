@@ -72,7 +72,7 @@ class TravelUI extends StatelessWidget {
                               fontSize: 18,
                               fontWeight: FontWeight.bold),
                         ),
-                        SizedBox(height: 10),
+                        const SizedBox(height: 10),
                         Container(
                           height: 200,
                           child: ListView(
@@ -108,7 +108,7 @@ class TravelUI extends StatelessWidget {
                               fontSize: 18,
                               fontWeight: FontWeight.bold),
                         ),
-                        SizedBox(height: 10),
+                        const SizedBox(height: 10),
                         Container(
                           height: 200,
                           child: ListView(
@@ -126,7 +126,7 @@ class TravelUI extends StatelessWidget {
                             ],
                           ),
                         ),
-                        SizedBox(height: 20),
+                        const SizedBox(height: 20),
                       ],
                     ),
                   ),
@@ -141,10 +141,11 @@ class TravelUI extends StatelessWidget {
     return AspectRatio(
       aspectRatio: 1 / 1,
       child: Shimmer(
-        duration: Duration(seconds: 3),
-        interval: Duration(seconds: 3),
+        duration: const Duration(seconds: 3),
+        interval: const Duration(seconds: 3),
         color: Colors.white,
         colorOpacity: 0,
+        direction: const ShimmerDirection.fromLTRB(),
         enabled: true,
         child: Container(
             margin: const EdgeInsets.only(right: 10),
@@ -164,7 +165,7 @@ class TravelUI extends StatelessWidget {
                 alignment: Alignment.bottomLeft,
                 child: Text(
                   title,
-                  style: TextStyle(
+                  style: const TextStyle(
                       color: Colors.white,
                       fontWeight: FontWeight.w500,
                       fontSize: 15),
