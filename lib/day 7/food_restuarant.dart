@@ -1,3 +1,4 @@
+import 'package:bouncing_widget/bouncing_widget.dart';
 import 'package:flutter/material.dart';
 
 class RestaurantUI extends StatelessWidget {
@@ -41,12 +42,12 @@ class RestaurantUI extends StatelessWidget {
                     ),
                     SizedBox(width: 10),
                     Text(
-                      'See restarunts nearby by \nsearching for nearest location',
+                      'See resturants nearby by \nsearching for nearest location',
                       style: TextStyle(color: Colors.white, fontSize: 15),
                     ),
                   ],
                 ),
-                const SizedBox(height: 100),
+                const SizedBox(height: 50),
                 Container(
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
@@ -65,6 +66,7 @@ class RestaurantUI extends StatelessWidget {
                     ),
                   ),
                 ),
+                const SizedBox(height: 30),
               ],
             ),
           )),
