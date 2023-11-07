@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shimmer_animation/shimmer_animation.dart';
 
 class TravelUI extends StatelessWidget {
   const TravelUI({super.key});
@@ -139,31 +140,38 @@ class TravelUI extends StatelessWidget {
   Widget carousel({image, title}) {
     return AspectRatio(
       aspectRatio: 1 / 1,
-      child: Container(
-          margin: const EdgeInsets.only(right: 10),
-          decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(30),
-              image:
-                  DecorationImage(image: AssetImage(image), fit: BoxFit.cover)),
-          child: Container(
-            padding: const EdgeInsets.all(30),
+      child: Shimmer(
+        duration: Duration(seconds: 3),
+        interval: Duration(seconds: 3),
+        color: Colors.white,
+        colorOpacity: 0,
+        enabled: true,
+        child: Container(
+            margin: const EdgeInsets.only(right: 10),
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(30),
-                gradient: LinearGradient(colors: [
-                  Colors.black.withOpacity(.8),
-                  Colors.black.withOpacity(.2),
-                ], begin: Alignment.bottomRight)),
-            child: Align(
-              alignment: Alignment.bottomLeft,
-              child: Text(
-                title,
-                style: TextStyle(
-                    color: Colors.white,
-                    fontWeight: FontWeight.w500,
-                    fontSize: 15),
+                image: DecorationImage(
+                    image: AssetImage(image), fit: BoxFit.cover)),
+            child: Container(
+              padding: const EdgeInsets.all(30),
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(30),
+                  gradient: LinearGradient(colors: [
+                    Colors.black.withOpacity(.8),
+                    Colors.black.withOpacity(.2),
+                  ], begin: Alignment.bottomRight)),
+              child: Align(
+                alignment: Alignment.bottomLeft,
+                child: Text(
+                  title,
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.w500,
+                      fontSize: 15),
+                ),
               ),
-            ),
-          )),
+            )),
+      ),
     );
   }
 }
