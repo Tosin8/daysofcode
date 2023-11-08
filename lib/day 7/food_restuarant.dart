@@ -33,7 +33,7 @@ class RestaurantUI extends StatelessWidget {
                         color: Colors.white,
                         fontSize: 40,
                         fontWeight: FontWeight.w700),
-                  ).animate().fadeIn(duration: 500.ms),
+                  ).animate().fadeIn(duration: Duration(milliseconds: 3000)),
                 ),
                 const SizedBox(height: 20),
                 const Row(
