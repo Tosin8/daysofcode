@@ -1,5 +1,5 @@
-import 'package:daysofcode/day%207/fade_animation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 
 class RestaurantUI extends StatelessWidget {
   const RestaurantUI({super.key});
@@ -25,17 +25,15 @@ class RestaurantUI extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                const FadeAnimation(
-                  1,
-                  Text(
+                Animate(
+                  effects: [const FadeEffect()],
+                  child: const Text(
                     'Taking Order \nFor Delivery',
                     style: TextStyle(
                         color: Colors.white,
                         fontSize: 40,
                         fontWeight: FontWeight.w700),
                   ),
-                  delay: null,
-                  child: null,
                 ),
                 const SizedBox(height: 20),
                 const Row(
