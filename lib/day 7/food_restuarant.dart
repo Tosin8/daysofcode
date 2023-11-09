@@ -66,7 +66,7 @@ class RestaurantUI extends StatelessWidget {
                       Navigator.push(
                           context,
                           PageTransition(
-                              type: PageTransitionType.fade,
+                              type: PageTransitionType.rightToLeft,
                               child: HomePage()));
                     },
                     child: const Text(

@@ -5,6 +5,13 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: Center(child: Text('This is the welcome page')));
+    return Scaffold(
+      appBar: AppBar(
+        actions: [
+          Icon(Icons.shopping_bag_outlined),
+        ],
+        automaticallyImplyLeading: false,
+      ),
+    );
   }
 }
