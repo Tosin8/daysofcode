@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
+import 'package:page_transition/page_transition.dart';
+
+import 'homepage.dart';
 
 class RestaurantUI extends StatelessWidget {
   const RestaurantUI({super.key});
@@ -59,7 +62,13 @@ class RestaurantUI extends StatelessWidget {
                       )),
                   child: MaterialButton(
                     minWidth: double.infinity,
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          PageTransition(
+                              type: PageTransitionType.fade,
+                              child: HomePage()));
+                    },
                     child: const Text(
                       'Start',
                       style: TextStyle(

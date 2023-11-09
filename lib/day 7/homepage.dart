@@ -8,4 +8,3 @@ class HomePage extends StatelessWidget {
     return Scaffold(body: Center(child: Text('This is the welcome page')));
   }
 }
-S

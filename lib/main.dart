@@ -1,6 +1,3 @@
-import 'package:daysofcode/day%201/travel_home.dart';
-import 'package:daysofcode/day%202/interior_home.dart';
-import 'package:daysofcode/day%205/travel_ui.dart';
 import 'package:daysofcode/day%207/food_restuarant.dart';
 import 'package:flutter/material.dart';
 
