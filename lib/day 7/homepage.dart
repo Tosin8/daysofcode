@@ -36,11 +36,23 @@ class HomePage extends StatelessWidget {
                     const SizedBox(height: 20),
                     Container(
                       height: 50,
-                      child: ListView(scrollDirection: Axis.horizontal),
+                      child: ListView(
+                        scrollDirection: Axis.horizontal,
+                        children: [
+                          makeCategory(isActive: true, title: 'Pizza'),
+                        ],
+                      ),
                     )
                   ],
                 ))
           ],
         )));
+  }
+
+  Widget makeCategory({isActive, title}) {
+    return AspectRatio(
+      aspectRatio: isActive ? 3 : 2.0 / 1,
+      child: Container(),
+    );
   }
 }
