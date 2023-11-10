@@ -52,7 +52,13 @@ class HomePage extends StatelessWidget {
   Widget makeCategory({isActive, title}) {
     return AspectRatio(
       aspectRatio: isActive ? 3 : 2.0 / 1,
-      child: Container(),
+      child: Container(
+        margin: const EdgeInsets.only(right: 10),
+        decoration: BoxDecoration(
+          color: isActive ? Colors.yellow[700] : Colors.white,
+          borderRadius: BorderRadius.circular(50),
+        ),
+      ),
     );
   }
 }
