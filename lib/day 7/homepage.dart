@@ -18,40 +18,54 @@ class HomePage extends StatelessWidget {
           automaticallyImplyLeading: false,
         ),
         body: SafeArea(
-            child: Column(
-          children: [
-            Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20.0),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    const FadeIn(
-                      child: Text(
-                        'Food Delivery',
-                        style: TextStyle(
-                            fontSize: 25, fontWeight: FontWeight.w500),
-                      ),
-                      duration: Duration(milliseconds: 300),
-                      curve: Curves.easeIn,
+            child: Column(children: [
+          Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const FadeIn(
+                    child: Text(
+                      'Food Delivery',
+                      style:
+                          TextStyle(fontSize: 25, fontWeight: FontWeight.w500),
                     ),
-                    const SizedBox(height: 20),
-                    Container(
-                      height: 50,
-                      child: ListView(
-                        scrollDirection: Axis.horizontal,
-                        children: [
-                          makeCategory(isActive: true, title: 'Pizza'),
-                          makeCategory(isActive: false, title: 'Salad'),
-                          makeCategory(isActive: false, title: 'Desert'),
-                          makeCategory(isActive: false, title: 'Burgers'),
-                          makeCategory(isActive: false, title: 'Kebab'),
-                        ],
-                      ),
-                    )
-                  ],
-                ))
-          ],
-        )));
+                    duration: Duration(milliseconds: 300),
+                    curve: Curves.easeIn,
+                  ),
+                  const SizedBox(height: 20),
+                  Container(
+                    height: 50,
+                    child: ListView(
+                      scrollDirection: Axis.horizontal,
+                      children: [
+                        makeCategory(isActive: true, title: 'Pizza'),
+                        makeCategory(isActive: false, title: 'Salad'),
+                        makeCategory(isActive: false, title: 'Desert'),
+                        makeCategory(isActive: false, title: 'Burgers'),
+                        makeCategory(isActive: false, title: 'Kebab'),
+                      ],
+                    ),
+                  ),
+                  SizedBox(height: 10),
+                ],
+              )),
+          Padding(
+            padding: const EdgeInsets.all(20),
+            child: Text(
+              'Free Delivery',
+              style: TextStyle(color: Colors.grey[700], fontSize: 20),
+            ),
+          ),
+          Expanded(
+              child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20.0),
+            child: ListView(
+              scrollDirection: Axis.horizontal,
+              children: [],
+            ),
+          ))
+        ])));
   }
 
   Widget makeCategory({isActive, title}) {
