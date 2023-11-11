@@ -53,12 +53,20 @@ class HomePage extends StatelessWidget {
     return AspectRatio(
       aspectRatio: isActive ? 3 : 2.0 / 1,
       child: Container(
-        margin: const EdgeInsets.only(right: 10),
-        decoration: BoxDecoration(
-          color: isActive ? Colors.yellow[700] : Colors.white,
-          borderRadius: BorderRadius.circular(50),
-        ),
-      ),
+          margin: const EdgeInsets.only(right: 10),
+          decoration: BoxDecoration(
+            color: isActive ? Colors.yellow[700] : Colors.white,
+            borderRadius: BorderRadius.circular(50),
+          ),
+          child: Align(
+            child: Text(
+              title,
+              style: TextStyle(
+                  color: isActive ? Colors.white : Colors.grey[500],
+                  fontSize: 20,
+                  fontWeight: FontWeight.w600),
+            ),
+          )),
     );
   }
 }
