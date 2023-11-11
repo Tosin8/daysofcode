@@ -23,6 +23,7 @@ class HomePage extends StatelessWidget {
             Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20.0),
                 child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     const FadeIn(
                       child: Text(
@@ -40,6 +41,10 @@ class HomePage extends StatelessWidget {
                         scrollDirection: Axis.horizontal,
                         children: [
                           makeCategory(isActive: true, title: 'Pizza'),
+                          makeCategory(isActive: false, title: 'Salad'),
+                          makeCategory(isActive: false, title: 'Desert'),
+                          makeCategory(isActive: false, title: 'Burgers'),
+                          makeCategory(isActive: false, title: 'Kebab'),
                         ],
                       ),
                     )
