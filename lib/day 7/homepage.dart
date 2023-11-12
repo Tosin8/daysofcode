@@ -65,9 +65,10 @@ class HomePage extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 20.0),
             child: ListView(
               scrollDirection: Axis.horizontal,
-              children: [makeItem(image: 'assets/images/')],
+              children: [makeItem(image: 'assets/travel_ui/2.jpg')],
             ),
-          ))
+          )),
+          SizedBox(height: 30),
         ])));
   }
 
@@ -97,8 +98,12 @@ class HomePage extends StatelessWidget {
       aspectRatio: 1 / 1.4,
       child: GestureDetector(
         child: Container(
-          color: Colors.red,
-        ),
+            decoration: BoxDecoration(
+                image: DecorationImage(
+                    image: AssetImage(image), fit: BoxFit.contain)),
+            child: Container(
+              decoration: BoxDecoration(),
+            )),
       ),
     );
   }
