@@ -54,7 +54,10 @@ class HomePage extends StatelessWidget {
             padding: const EdgeInsets.all(20),
             child: Text(
               'Free Delivery',
-              style: TextStyle(color: Colors.grey[700], fontSize: 20),
+              style: TextStyle(
+                  color: Colors.grey[700],
+                  fontSize: 20,
+                  fontWeight: FontWeight.w700),
             ),
           ),
           Expanded(
@@ -62,7 +65,7 @@ class HomePage extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 20.0),
             child: ListView(
               scrollDirection: Axis.horizontal,
-              children: [],
+              children: [makeItem(image: 'assets/images/')],
             ),
           ))
         ])));
@@ -86,6 +89,13 @@ class HomePage extends StatelessWidget {
                   fontWeight: FontWeight.w600),
             ),
           )),
+    );
+  }
+
+  Widget makeItem({image}) {
+    return AspectRatio(
+      aspectRatio: 1 / 1.4,
+      child:  ,
     );
   }
 }
