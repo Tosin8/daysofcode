@@ -47,7 +47,7 @@ class HomePage extends StatelessWidget {
                       ],
                     ),
                   ),
-                  SizedBox(height: 10),
+                  const SizedBox(height: 10),
                 ],
               )),
           Padding(
@@ -72,7 +72,7 @@ class HomePage extends StatelessWidget {
               ],
             ),
           )),
-          SizedBox(height: 30),
+          const SizedBox(height: 30),
         ])));
   }
 
@@ -102,7 +102,7 @@ class HomePage extends StatelessWidget {
       aspectRatio: 1 / 1.4,
       child: GestureDetector(
         child: Container(
-            margin: EdgeInsets.only(right: 20),
+            margin: const EdgeInsets.only(right: 20),
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(20),
                 image: DecorationImage(
@@ -118,9 +118,11 @@ class HomePage extends StatelessWidget {
                     begin: Alignment.bottomCenter,
                     stops: [.2, .9],
                   )),
-              child: Padding(
+              child: const Padding(
                 padding: EdgeInsets.all(20.0),
                 child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Align(
                       alignment: Alignment.topRight,
@@ -128,7 +130,23 @@ class HomePage extends StatelessWidget {
                         Icons.favorite,
                         color: Colors.white,
                       ),
-                    )
+                    ),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          '\$ 15.00',
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 30,
+                              fontWeight: FontWeight.w600),
+                        ),
+                        SizedBox(height: 10),
+                        Text('Vegetarian Pizzas',
+                            style: TextStyle(color: Colors.white, fontSize: 20))
+                      ],
+                    ),
                   ],
                 ),
               ),
