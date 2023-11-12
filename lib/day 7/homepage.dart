@@ -99,10 +99,22 @@ class HomePage extends StatelessWidget {
       child: GestureDetector(
         child: Container(
             decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(20),
                 image: DecorationImage(
                     image: AssetImage(image), fit: BoxFit.contain)),
             child: Container(
-              decoration: BoxDecoration(),
+              decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                colors: [
+                  Colors.black.withOpacity(.9),
+                  Colors.black.withOpacity(.3)
+                ],
+                begin: Alignment.bottomCenter,
+                stops: [.2, .9],
+              )),
+              child: Padding(
+                padding: EdgeInsets.all(20.0),
+              ),
             )),
       ),
     );
