@@ -95,7 +95,11 @@ class HomePage extends StatelessWidget {
   Widget makeItem({image}) {
     return AspectRatio(
       aspectRatio: 1 / 1.4,
-      child:  ,
+      child: GestureDetector(
+        child: Container(
+          color: Colors.red,
+        ),
+      ),
     );
   }
 }
