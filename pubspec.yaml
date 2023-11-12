@@ -66,6 +66,7 @@ flutter:
     - assets/travel_ui/header.jpg
     - assets/food_ui/1.jpg
     - assets/food_ui/2.jpg
+    - assets/food_ui/3.jpg
     - assets/food_ui/nav.json
     - assets/interior_app/1.jpg
     - assets/interior_app/2.jpg
