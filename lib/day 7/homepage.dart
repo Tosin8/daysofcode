@@ -114,6 +114,17 @@ class HomePage extends StatelessWidget {
               )),
               child: Padding(
                 padding: EdgeInsets.all(20.0),
+                child: Column(
+                  children: [
+                    Align(
+                      alignment: Alignment.topRight,
+                      child: Icon(
+                        Icons.favorite,
+                        color: Colors.white,
+                      ),
+                    )
+                  ],
+                ),
               ),
             )),
       ),
