@@ -1,6 +1,8 @@
 import 'package:daysofcode/day%207/food_restuarant.dart';
 import 'package:flutter/material.dart';
 
+import 'day8.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -18,7 +20,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const RestaurantUI(),
+      home: const day8(),
     );
   }
 }
