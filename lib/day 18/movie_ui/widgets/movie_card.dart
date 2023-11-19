@@ -39,8 +39,8 @@ class MovieCardWidget extends StatelessWidget {
         ),
       );
   Widget buildImage({required Movie movie}) => Container(
-        margin: const EdgeInsets.symmetric(vertical: 12),
-        padding: const EdgeInsets.symmetric(horizontal: 12),
+        margin: const EdgeInsets.symmetric(vertical: 10),
+        padding: const EdgeInsets.symmetric(horizontal: 10),
         child: ClipRRect(
           borderRadius: const BorderRadius.all(Radius.circular(25)),
           child: Image.asset(movie.imageUrl, fit: BoxFit.cover),
@@ -64,14 +64,16 @@ class MovieCardWidget extends StatelessWidget {
               )))
           .toList());
 
-  buildRating({required Movie movie}) {
-    Row(
-      children: [
-        Text(movie.rating.toStringAsFixed(1)),
-        const SizedBox(width: 10),
-        ...List.generate(movie.stars,
-            (index) => const Icon(Icons.star_rate, size: 18, color: Colors.orange))
-      ],
-    );
-  }
+  Widget buildRating({required Movie movie}) => Row(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text(movie.rating.toStringAsFixed(1)),
+          const SizedBox(width: 10),
+          ...List.generate(
+              movie.stars,
+              (index) =>
+                  const Icon(Icons.star_rate, size: 18, color: Colors.orange))
+        ],
+      );
 }

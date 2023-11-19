@@ -9,14 +9,16 @@ import 'widgets/movie_card.dart';
 class day18 extends StatelessWidget {
   final controller = PageController();
 
+  day18({super.key});
+
   @override
   Widget build(BuildContext context) => Scaffold(
         extendBodyBehindAppBar: true,
         appBar: AppBar(
           elevation: 0,
           backgroundColor: Colors.transparent,
-          leading: Icon(Icons.close),
-          actions: [Icon(Icons.person_outline), SizedBox(width: 15)],
+          leading: const Icon(Icons.close),
+          actions: const [Icon(Icons.person_outline), SizedBox(width: 15)],
         ),
         body: Stack(
           children: [
@@ -36,13 +38,13 @@ class day18 extends StatelessWidget {
                       enlargeCenterPage: true,
                       onPageChanged: (index, _) => controller.animateToPage(
                         index,
-                        duration: Duration(seconds: 1),
+                        duration: const Duration(seconds: 1),
                         curve: Curves.ease,
                       ),
                     ),
                   ),
-                  BuyBtnWidget(),
-                  SizedBox(height: 20),
+                  const BuyBtnWidget(),
+                  const SizedBox(height: 20),
                 ],
               ),
             ),
