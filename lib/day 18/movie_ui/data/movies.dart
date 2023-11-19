@@ -15,7 +15,7 @@ List<Movie> movies = [
       movieName: 'The Hustle',
       stars: 4,
       director: 'Chris Addison',
-      imageUrl: 'assets/hustle.jpg',
+      imageUrl: 'assets/movie_app/hustle.jpg',
       rating: 9.0,
       genres: ['Crime', 'Thriller'],
       cast: [
@@ -30,7 +30,7 @@ List<Movie> movies = [
       movieName: 'Good Boys',
       stars: 4,
       director: 'Gene Stupnitsky',
-      imageUrl: 'assets/good_boys.jpg',
+      imageUrl: 'assets/movie_app/good_boys.jpg',
       rating: 9.0,
       genres: ['Adventure', 'Comedy'],
       cast: [
@@ -45,7 +45,7 @@ List<Movie> movies = [
       movieName: 'Once Upon A Time in Hollywood',
       director: 'Quentin Tarantino',
       stars: 4,
-      imageUrl: 'assets/hollywood.jpg',
+      imageUrl: 'assets/movie_app/hollywood.jpg',
       rating: 9.0,
       genres: ['Comedy', 'Drama'],
       cast: [
