@@ -6,8 +6,13 @@ class BuyBtnWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 200, height: 40, 
-      child: R,
-    );
+        width: 200,
+        height: 40,
+        child: ElevatedButton(
+            onPressed: () {},
+            child: Text(
+              'Buy Ticket',
+              style: TextStyle(color: Colors.white),
+            )));
   }
 }
