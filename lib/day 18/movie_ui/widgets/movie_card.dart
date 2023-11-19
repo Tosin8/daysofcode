@@ -19,6 +19,20 @@ class MovieCardWidget extends StatelessWidget {
           child: Column(
             children: [
               Expanded(child: buildImage(movie: movie)),
+              const SizedBox(height: 4),
+              Text(
+                movie.movieName,
+                textAlign: TextAlign.center,
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+              ),
+              const SizedBox(height: 4),
+              buildGenre(movie: movie),
+              const SizedBox(height: 4),
+              buildRating(movie: movie),
+              Text(
+                '...',
+                style: TextStyle(fontWeight: FontWeight.bold),
+              ),
             ],
           ),
         ),
