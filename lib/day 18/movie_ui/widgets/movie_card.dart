@@ -63,4 +63,12 @@ class MovieCardWidget extends StatelessWidget {
                 ),
               )))
           .toList());
+          
+            buildRating({required Movie movie}) {}
+          
+            
+
+        
 }
+
+
