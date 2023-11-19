@@ -37,4 +37,6 @@ class MovieCardWidget extends StatelessWidget {
           ),
         ),
       );
+  Widget buildImage({required Movie movie}) =>
+      Container(margin: const EdgeInsets.symmetric(vertical: 12));
 }
