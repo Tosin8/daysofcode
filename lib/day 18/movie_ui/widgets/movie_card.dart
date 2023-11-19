@@ -56,19 +56,22 @@ class MovieCardWidget extends StatelessWidget {
                 decoration: BoxDecoration(
                     border: Border.all(color: Colors.grey),
                     borderRadius: BorderRadius.circular(15)),
-                padding: EdgeInsets.all(5),
+                padding: const EdgeInsets.all(5),
                 child: Text(
                   genre,
                   style: TextStyle(color: Colors.grey[600], fontSize: 12),
                 ),
               )))
           .toList());
-          
-            buildRating({required Movie movie}) {}
-          
-            
 
-        
+  buildRating({required Movie movie}) {
+    Row(
+      children: [
+        Text(movie.rating.toStringAsFixed(1)),
+        const SizedBox(width: 10),
+        ...List.generate(movie.stars,
+            (index) => const Icon(Icons.star_rate, size: 18, color: Colors.orange))
+      ],
+    );
+  }
 }
-
-
