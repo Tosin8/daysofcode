@@ -6,9 +6,15 @@ class day18 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Container(
-      decoration: BoxDecoration(
-        color: Colors.white,
+        body: Padding(
+      padding: const EdgeInsets.all(5.0),
+      child: Container(
+        decoration: const BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(30),
+               topRight: Radius.circular(30)),
+        ),
       ),
     ));
   }
