@@ -10,7 +10,9 @@ class BuyBtnWidget extends StatelessWidget {
         height: 40,
         child: ElevatedButton(
             onPressed: () {},
-            child: Text(
+            style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all(Colors.black54)),
+            child: const Text(
               'Buy Ticket',
               style: TextStyle(color: Colors.white),
             )));
