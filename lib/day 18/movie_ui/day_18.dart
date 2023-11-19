@@ -19,6 +19,12 @@ class day18 extends StatelessWidget {
             child: Column(
               children: [
                 Expanded(child: buildImage(movie: movie)),
+                const SizedBox(height: 4),
+                Text(
+                  movie.movieName,
+                  textAlign: TextAlign.center,
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                )
               ],
             ),
           )),
