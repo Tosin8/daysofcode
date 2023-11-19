@@ -23,13 +23,14 @@ class MovieCardWidget extends StatelessWidget {
               Text(
                 movie.movieName,
                 textAlign: TextAlign.center,
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                style:
+                    const TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
               ),
               const SizedBox(height: 4),
               buildGenre(movie: movie),
               const SizedBox(height: 4),
               buildRating(movie: movie),
-              Text(
+              const Text(
                 '...',
                 style: TextStyle(fontWeight: FontWeight.bold),
               ),
@@ -41,12 +42,25 @@ class MovieCardWidget extends StatelessWidget {
         margin: const EdgeInsets.symmetric(vertical: 12),
         padding: const EdgeInsets.symmetric(horizontal: 12),
         child: ClipRRect(
-          borderRadius: BorderRadius.all(Radius.circular(25)),
+          borderRadius: const BorderRadius.all(Radius.circular(25)),
           child: Image.asset(movie.imageUrl, fit: BoxFit.cover),
         ),
       );
 
   Widget buildGenre({required Movie movie}) => Row(
-        children: [],
-      );
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: movie.genres
+          .map((genre) => Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 5),
+              child: Container(
+                decoration: BoxDecoration(
+                    border: Border.all(color: Colors.grey),
+                    borderRadius: BorderRadius.circular(15)),
+                padding: EdgeInsets.all(5),
+                child: Text(
+                  genre,
+                  style: TextStyle(color: Colors.grey[600], fontSize: 12),
+                ),
+              )))
+          .toList());
 }
