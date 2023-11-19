@@ -37,6 +37,16 @@ class MovieCardWidget extends StatelessWidget {
           ),
         ),
       );
-  Widget buildImage({required Movie movie}) =>
-      Container(margin: const EdgeInsets.symmetric(vertical: 12));
+  Widget buildImage({required Movie movie}) => Container(
+        margin: const EdgeInsets.symmetric(vertical: 12),
+        padding: const EdgeInsets.symmetric(horizontal: 12),
+        child: ClipRRect(
+          borderRadius: BorderRadius.all(Radius.circular(25)),
+          child: Image.asset(movie.imageUrl, fit: BoxFit.cover),
+        ),
+      );
+
+  Widget buildGenre({required Movie movie}) => Row(
+        children: [],
+      );
 }
