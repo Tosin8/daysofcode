@@ -32,7 +32,7 @@ class _CategoryState extends State<Category> {
                       image: DecorationImage(
                           image: AssetImage(widget.image), fit: BoxFit.cover)),
                   child: Container(
-                    padding: EdgeInsets.all(10),
+                    padding: const EdgeInsets.all(10),
                     decoration: BoxDecoration(
                       gradient: LinearGradient(colors: [
                         Colors.black.withOpacity(0.8),
@@ -44,7 +44,7 @@ class _CategoryState extends State<Category> {
                       children: [
                         Column(
                           children: [
-                            SizedBox(height: 30),
+                            const SizedBox(height: 30),
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
@@ -82,12 +82,12 @@ class _CategoryState extends State<Category> {
                         ),
                         Text(
                           widget.title,
-                          style: TextStyle(
+                          style: const TextStyle(
                               fontWeight: FontWeight.w500,
                               color: Colors.white,
                               fontSize: 30),
                         ),
-                        SizedBox(height: 50),
+                        const SizedBox(height: 50),
                       ],
                     ),
                   ),
@@ -101,18 +101,29 @@ class _CategoryState extends State<Category> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text('New Product'),
+                      const Text(
+                        'New Product',
+                        style: TextStyle(
+                            color: Colors.black,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 18),
+                      ),
                       Row(
                         children: [
-                          Text('View More'),
-                          SizedBox(width: 5),
+                          const Text('View More'),
                           IconButton(
                               onPressed: () {},
-                              icon: Icon(Icons.arrow_forward_ios, size: 11))
+                              icon:
+                                  const Icon(Icons.arrow_forward_ios, size: 11))
                         ],
                       )
                     ],
-                  )
+                  ),
+                  SizedBox(height: 10),
+                  makeProduct(
+                      image: 'assets/ecommerce/shoes/1.jpg',
+                      title: 'Shoes',
+                      price: '100')
                 ],
               ),
             ),
@@ -120,5 +131,22 @@ class _CategoryState extends State<Category> {
         )),
       ),
     );
+  }
+
+  Widget makeProduct({image, title, price}) {
+    return Container(
+        height: 200,
+        decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(10),
+            image:
+                DecorationImage(image: AssetImage(image), fit: BoxFit.cover)),
+        child: Container(
+          padding: EdgeInsets.all(10),
+          decoration: BoxDecoration(
+              gradient: LinearGradient(colors: [
+            Colors.black.withOpacity(.8),
+            Colors.black.withOpacity(.1)
+          ], begin: Alignment.bottomRight)),
+        ));
   }
 }
