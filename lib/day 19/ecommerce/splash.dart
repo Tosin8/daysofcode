@@ -7,9 +7,26 @@ class day19 extends StatefulWidget {
   State<day19> createState() => _day19State();
 }
 
-class _day19State extends State<day19> {
+class _day19State extends State<day19> with TickerProviderStateMixin {
   AnimationController _scaleController;
   Animation<double> _scaleAnimation;
+
+  bool hide = false;
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    _scaleController =
+        AnimationController(vsync: this, duration: Duration(milliseconds: 500));
+  }
+
+  @override
+  void dispose() {
+    // TODO: implement dispose
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
