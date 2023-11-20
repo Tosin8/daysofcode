@@ -10,6 +10,13 @@ class day19 extends StatelessWidget {
       decoration: BoxDecoration(
           image: DecorationImage(
               image: AssetImage('assets/ecommerce/2.jpg'), fit: BoxFit.cover)),
+      child: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+              colors: [Colors.grey.withOpacity(0.4), Colors.black38],
+              begin: Alignment.topCenter),
+        ),
+      ),
     ));
   }
 }
