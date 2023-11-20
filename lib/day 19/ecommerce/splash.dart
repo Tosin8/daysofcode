@@ -17,8 +17,24 @@ class day19 extends StatelessWidget {
               colors: [Colors.grey.withOpacity(0.4), Colors.black38],
               begin: Alignment.topCenter),
         ),
-        child: Column(
-          children: [Text('Brand New Perspective')],
+        child: Padding(
+          padding: const EdgeInsets.only(
+            left: 20,
+            right: 120,
+          ),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              Text(
+                'Brand New Perspective',
+                style: TextStyle(
+                    fontSize: 30,
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                    letterSpacing: 1.5),
+              )
+            ],
+          ),
         ),
       ),
     ));
