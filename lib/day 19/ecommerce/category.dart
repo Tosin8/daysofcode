@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 class Category extends StatefulWidget {
   final String title;
   final String image;
-  const Category({super.key, required this.title, required this.image});
+  final String tag;
+  const Category(
+      {super.key, required this.title, required this.image, required this.tag});
 
   @override
   State<Category> createState() => _CategoryState();

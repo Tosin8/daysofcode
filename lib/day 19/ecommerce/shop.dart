@@ -1,3 +1,4 @@
+import 'package:daysofcode/day%2019/ecommerce/category.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 
@@ -161,32 +162,43 @@ class Shop extends StatelessWidget {
     );
   }
 
-  Widget makeCategory(image, title) {
+  Widget makeCategory(image, title, tag) {
     return AspectRatio(
       aspectRatio: 2 / 2,
-      child: Container(
-        margin: const EdgeInsets.only(right: 20),
-        decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(10),
-            image:
-                DecorationImage(image: AssetImage(image), fit: BoxFit.cover)),
-        child: Container(
-          padding: EdgeInsets.all(10),
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(10),
-            gradient: LinearGradient(colors: [
-              Colors.black.withOpacity(0.8),
-              Colors.black.withOpacity(0.2),
-            ], begin: Alignment.bottomRight),
-          ),
-          child: Align(
-            alignment: Alignment.bottomLeft,
-            child: Text(
-              title,
-              style: TextStyle(
-                  fontWeight: FontWeight.w500,
-                  color: Colors.white,
-                  fontSize: 18),
+      child: Hero(
+        child: GestureDetector(
+          onTap: () {
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) =>
+                        Category(title: title, image: image, tag: tag)));
+          },
+          child: Container(
+            margin: const EdgeInsets.only(right: 20),
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+                image: DecorationImage(
+                    image: AssetImage(image), fit: BoxFit.cover)),
+            child: Container(
+              padding: EdgeInsets.all(10),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+                gradient: LinearGradient(colors: [
+                  Colors.black.withOpacity(0.8),
+                  Colors.black.withOpacity(0.2),
+                ], begin: Alignment.bottomRight),
+              ),
+              child: Align(
+                alignment: Alignment.bottomLeft,
+                child: Text(
+                  title,
+                  style: TextStyle(
+                      fontWeight: FontWeight.w500,
+                      color: Colors.white,
+                      fontSize: 18),
+                ),
+              ),
             ),
           ),
         ),
