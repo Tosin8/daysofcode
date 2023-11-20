@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:page_transition/page_transition.dart';
 
 class day19 extends StatefulWidget {
   const day19({super.key});
@@ -21,7 +22,13 @@ class _day19State extends State<day19> with TickerProviderStateMixin {
         AnimationController(vsync: this, duration: Duration(milliseconds: 500));
 
     _scaleAnimation =
-        Tween<double>(begin: 1.0, end: 30.0).animate(_scaleController);
+        Tween<double>(begin: 1.0, end: 30.0).animate(_scaleController)
+          ..addStatusListener((status) {
+            if (status == AnimationStatus.completed) {
+              Navigator.push(context,
+                  PageTransition(child: Shop(), type: PageTransitionType.fade));
+            }
+          });
   }
 
   @override
@@ -79,6 +86,7 @@ class _day19State extends State<day19> with TickerProviderStateMixin {
                   builder: (context, child) => Transform.scale(
                     scale: _scaleAnimation.value,
                     child: Container(
+                      height: 50,
                       width: double.infinity,
                       decoration: BoxDecoration(
                           color: Colors.white,
