@@ -107,13 +107,19 @@ class Shop extends StatelessWidget {
                   ),
                   const SizedBox(height: 20),
                   Container(
-                    height: 100,
+                    height: 150,
                     child: ListView(
                       scrollDirection: Axis.horizontal,
                       children: [
                         AspectRatio(
-                          aspectRatio: 2 / 1,
-                          child: Container(),
+                          aspectRatio: 2 / 2,
+                          child: Container(
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(30),
+                                image: DecorationImage(
+                                    image: AssetImage('assets/ecommerce/4.jpg'),
+                                    fit: BoxFit.cover)),
+                          ),
                         )
                       ],
                     ),
