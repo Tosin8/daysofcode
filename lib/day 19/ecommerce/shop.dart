@@ -110,43 +110,46 @@ class Shop extends StatelessWidget {
                     height: 150,
                     child: ListView(
                       scrollDirection: Axis.horizontal,
-                      children: [
-                        AspectRatio(
-                          aspectRatio: 2 / 2,
-                          child: Container(
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(10),
-                                image: DecorationImage(
-                                    image: AssetImage('assets/ecommerce/4.jpg'),
-                                    fit: BoxFit.cover)),
-                            child: Container(
-                              padding: EdgeInsets.all(10),
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(10),
-                                gradient: LinearGradient(colors: [
-                                  Colors.black.withOpacity(0.8),
-                                  Colors.black.withOpacity(0.2),
-                                ], begin: Alignment.bottomRight),
-                              ),
-                              child: Align(
-                                alignment: Alignment.bottomLeft,
-                                child: Text(
-                                  'Shoes',
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.w500,
-                                      color: Colors.white,
-                                      fontSize: 20),
-                                ),
-                              ),
-                            ),
-                          ),
-                        )
-                      ],
+                      children: [],
                     ),
                   ),
                 ],
               ))
         ],
+      ),
+    );
+  }
+
+  Widget makeCategory(image, title) {
+    return AspectRatio(
+      aspectRatio: 2 / 2,
+      child: Container(
+        margin: const EdgeInsets.only(right: 20),
+        decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(10),
+            image: DecorationImage(
+                image: AssetImage('assets/ecommerce/4.jpg'),
+                fit: BoxFit.cover)),
+        child: Container(
+          padding: EdgeInsets.all(10),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(10),
+            gradient: LinearGradient(colors: [
+              Colors.black.withOpacity(0.8),
+              Colors.black.withOpacity(0.2),
+            ], begin: Alignment.bottomRight),
+          ),
+          child: Align(
+            alignment: Alignment.bottomLeft,
+            child: Text(
+              'Shoes',
+              style: TextStyle(
+                  fontWeight: FontWeight.w500,
+                  color: Colors.white,
+                  fontSize: 20),
+            ),
+          ),
+        ),
       ),
     );
   }
