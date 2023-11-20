@@ -39,51 +39,54 @@ class _CategoryState extends State<Category> {
                     ], begin: Alignment.bottomRight),
                   ),
                   child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      SizedBox(height: 30),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      Column(
                         children: [
-                          IconButton(
-                              onPressed: () {
-                                Navigator.push(
-                                    context,
-                                    PageTransition(
-                                        child: const Shop(),
-                                        type: PageTransitionType.fade));
-                              },
-                              icon: const Icon(Icons.arrow_back_ios,
-                                  color: Colors.white)),
+                          SizedBox(height: 30),
                           Row(
-                            mainAxisAlignment: MainAxisAlignment.end,
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               IconButton(
-                                  onPressed: () {},
-                                  icon: const Icon(Icons.search,
+                                  onPressed: () {
+                                    Navigator.push(
+                                        context,
+                                        PageTransition(
+                                            child: const Shop(),
+                                            type: PageTransitionType.fade));
+                                  },
+                                  icon: const Icon(Icons.arrow_back_ios,
                                       color: Colors.white)),
-                              IconButton(
-                                  onPressed: () {},
-                                  icon: const Icon(
-                                      Icons.favorite_border_outlined,
-                                      color: Colors.white)),
-                              IconButton(
-                                  onPressed: () {},
-                                  icon: const Icon(Icons.shopping_bag,
-                                      color: Colors.white)),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                children: [
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(Icons.search,
+                                          color: Colors.white)),
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(
+                                          Icons.favorite_border_outlined,
+                                          color: Colors.white)),
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(Icons.shopping_bag,
+                                          color: Colors.white)),
+                                ],
+                              ),
                             ],
                           ),
                         ],
                       ),
-                      Align(
-                        alignment: Alignment.bottomLeft,
-                        child: Text(
-                          widget.title,
-                          style: TextStyle(
-                              fontWeight: FontWeight.w500,
-                              color: Colors.white,
-                              fontSize: 18),
-                        ),
+                      Text(
+                        widget.title,
+                        style: TextStyle(
+                            fontWeight: FontWeight.w500,
+                            color: Colors.white,
+                            fontSize: 30),
                       ),
+                      SizedBox(height: 50),
                     ],
                   ),
                 ),
