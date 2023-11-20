@@ -1,6 +1,7 @@
-import 'package:daysofcode/day%2019/ecommerce/splash.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
+
+import 'splash.dart';
 
 class Shop extends StatelessWidget {
   const Shop({super.key});
@@ -13,7 +14,7 @@ class Shop extends StatelessWidget {
           Container(
             height: 500,
             width: double.infinity,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
                 image: DecorationImage(
                     image: AssetImage(
                       'assets/ecommerce/1.jpg',
@@ -36,24 +37,24 @@ class Shop extends StatelessWidget {
                       children: [
                         IconButton(
                             onPressed: () {
-                              Navigator.pop(
+                              Navigator.push(
                                   context,
                                   PageTransition(
-                                      child: day19(),
+                                      child: const day19(),
                                       type: PageTransitionType.fade));
                             },
-                            icon: Icon(Icons.arrow_back_ios,
+                            icon: const Icon(Icons.arrow_back_ios,
                                 color: Colors.white)),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.end,
                           children: [
                             IconButton(
                                 onPressed: () {},
-                                icon:
-                                    Icon(Icons.favorite, color: Colors.white)),
+                                icon: const Icon(Icons.favorite,
+                                    color: Colors.white)),
                             IconButton(
                                 onPressed: () {},
-                                icon: Icon(Icons.shopping_bag,
+                                icon: const Icon(Icons.shopping_bag,
                                     color: Colors.white)),
                           ],
                         )
