@@ -8,8 +8,8 @@ class day19 extends StatefulWidget {
 }
 
 class _day19State extends State<day19> with TickerProviderStateMixin {
-  AnimationController _scaleController;
-  Animation<double> _scaleAnimation;
+  late AnimationController _scaleController;
+  late Animation<double> _scaleAnimation;
 
   bool hide = false;
 
@@ -68,19 +68,31 @@ class _day19State extends State<day19> with TickerProviderStateMixin {
               ),
               const SizedBox(height: 40),
               InkWell(
-                onTap: () {},
-                child: Container(
-                  height: 50,
-                  width: double.infinity,
-                  decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(30)),
-                  child: const Align(
-                      alignment: Alignment.center,
-                      child: Text(
-                        'Start Shopping',
-                        style: TextStyle(fontWeight: FontWeight.bold),
-                      )),
+                onTap: () {
+                  setState(() {
+                    hide = true;
+                  });
+                  _scaleController.forward();
+                },
+                child: AnimatedBuilder(
+                  animation: _scaleController,
+                  builder: (context, child) => Transform.scale(
+                    scale: _scaleAnimation.value,
+                    child: Container(
+                      width: double.infinity,
+                      decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(30)),
+                      child: Align(
+                          alignment: Alignment.center,
+                          child: hide == false
+                              ? Text(
+                                  'Start Shopping',
+                                  style: TextStyle(fontWeight: FontWeight.bold),
+                                )
+                              : Container()),
+                    ),
+                  ),
                 ),
               ),
               const SizedBox(height: 12),
