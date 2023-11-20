@@ -19,6 +19,9 @@ class _day19State extends State<day19> with TickerProviderStateMixin {
     super.initState();
     _scaleController =
         AnimationController(vsync: this, duration: Duration(milliseconds: 500));
+
+    _scaleAnimation =
+        Tween<double>(begin: 1.0, end: 30.0).animate(_scaleController);
   }
 
   @override
@@ -64,18 +67,21 @@ class _day19State extends State<day19> with TickerProviderStateMixin {
                     fontWeight: FontWeight.w300),
               ),
               const SizedBox(height: 40),
-              Container(
-                height: 50,
-                width: double.infinity,
-                decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(30)),
-                child: const Align(
-                    alignment: Alignment.center,
-                    child: Text(
-                      'Start Shopping',
-                      style: TextStyle(fontWeight: FontWeight.bold),
-                    )),
+              InkWell(
+                onTap: () {},
+                child: Container(
+                  height: 50,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(30)),
+                  child: const Align(
+                      alignment: Alignment.center,
+                      child: Text(
+                        'Start Shopping',
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      )),
+                ),
               ),
               const SizedBox(height: 12),
               Container(
