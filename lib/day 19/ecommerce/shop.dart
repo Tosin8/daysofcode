@@ -50,16 +50,30 @@ class Shop extends StatelessWidget {
                           children: [
                             IconButton(
                                 onPressed: () {},
-                                icon: const Icon(Icons.favorite,
+                                icon: const Icon(Icons.favorite_border_outlined,
                                     color: Colors.white)),
                             IconButton(
                                 onPressed: () {},
                                 icon: const Icon(Icons.shopping_bag,
                                     color: Colors.white)),
                           ],
-                        )
+                        ),
                       ],
                     ),
+                    Padding(
+                      padding: const EdgeInsets.all(20.0),
+                      child: Column(
+                        children: [
+                          Text(
+                            'Our New Products',
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 30,
+                                fontWeight: FontWeight.bold),
+                          )
+                        ],
+                      ),
+                    )
                   ],
                 ),
               ),
