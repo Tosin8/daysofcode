@@ -115,10 +115,30 @@ class Shop extends StatelessWidget {
                           aspectRatio: 2 / 2,
                           child: Container(
                             decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(30),
+                                borderRadius: BorderRadius.circular(10),
                                 image: DecorationImage(
                                     image: AssetImage('assets/ecommerce/4.jpg'),
                                     fit: BoxFit.cover)),
+                            child: Container(
+                              padding: EdgeInsets.all(10),
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(10),
+                                gradient: LinearGradient(colors: [
+                                  Colors.black.withOpacity(0.8),
+                                  Colors.black.withOpacity(0.2),
+                                ], begin: Alignment.bottomRight),
+                              ),
+                              child: Align(
+                                alignment: Alignment.bottomLeft,
+                                child: Text(
+                                  'Shoes',
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.w500,
+                                      color: Colors.white,
+                                      fontSize: 20),
+                                ),
+                              ),
+                            ),
                           ),
                         )
                       ],
