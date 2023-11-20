@@ -20,9 +20,30 @@ class Shop extends StatelessWidget {
             child: Container(
               decoration: BoxDecoration(
                   gradient: LinearGradient(colors: [
-                Colors.black.withOpacity(0.9),
-                Colors.black.withOpacity(.4)
+                Colors.black.withOpacity(0.5),
+                Colors.black.withOpacity(.2)
               ], begin: Alignment.bottomRight)),
+              child: Padding(
+                padding: const EdgeInsets.only(top: 50.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        IconButton(
+                            onPressed: () {},
+                            icon: Icon(Icons.favorite, color: Colors.white)),
+                        IconButton(
+                            onPressed: () {},
+                            icon:
+                                Icon(Icons.shopping_bag, color: Colors.white)),
+                      ],
+                    )
+                  ],
+                ),
+              ),
             ),
           )
         ],
