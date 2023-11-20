@@ -4,9 +4,14 @@ import 'package:page_transition/page_transition.dart';
 
 import 'splash.dart';
 
-class Shop extends StatelessWidget {
+class Shop extends StatefulWidget {
   const Shop({super.key});
 
+  @override
+  State<Shop> createState() => _ShopState();
+}
+
+class _ShopState extends State<Shop> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -181,29 +186,31 @@ class Shop extends StatelessWidget {
                     builder: (context) =>
                         Category(title: title, image: image, tag: tag)));
           },
-          child: Container(
-            margin: const EdgeInsets.only(right: 20),
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
-                image: DecorationImage(
-                    image: AssetImage(image), fit: BoxFit.cover)),
+          child: Material(
             child: Container(
-              padding: EdgeInsets.all(10),
+              margin: const EdgeInsets.only(right: 20),
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
-                gradient: LinearGradient(colors: [
-                  Colors.black.withOpacity(0.8),
-                  Colors.black.withOpacity(0.2),
-                ], begin: Alignment.bottomRight),
-              ),
-              child: Align(
-                alignment: Alignment.bottomLeft,
-                child: Text(
-                  title,
-                  style: TextStyle(
-                      fontWeight: FontWeight.w500,
-                      color: Colors.white,
-                      fontSize: 18),
+                  borderRadius: BorderRadius.circular(10),
+                  image: DecorationImage(
+                      image: AssetImage(image), fit: BoxFit.cover)),
+              child: Container(
+                padding: EdgeInsets.all(10),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                  gradient: LinearGradient(colors: [
+                    Colors.black.withOpacity(0.8),
+                    Colors.black.withOpacity(0.2),
+                  ], begin: Alignment.bottomRight),
+                ),
+                child: Align(
+                  alignment: Alignment.bottomLeft,
+                  child: Text(
+                    title,
+                    style: TextStyle(
+                        fontWeight: FontWeight.w500,
+                        color: Colors.white,
+                        fontSize: 18),
+                  ),
                 ),
               ),
             ),
