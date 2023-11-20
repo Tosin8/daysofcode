@@ -1,4 +1,6 @@
+import 'package:daysofcode/day%2019/ecommerce/splash.dart';
 import 'package:flutter/material.dart';
+import 'package:page_transition/page_transition.dart';
 
 class Shop extends StatelessWidget {
   const Shop({super.key});
@@ -30,17 +32,33 @@ class Shop extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Row(
-                      mainAxisAlignment: MainAxisAlignment.end,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         IconButton(
-                            onPressed: () {},
-                            icon: Icon(Icons.favorite, color: Colors.white)),
-                        IconButton(
-                            onPressed: () {},
-                            icon:
-                                Icon(Icons.shopping_bag, color: Colors.white)),
+                            onPressed: () {
+                              Navigator.pop(
+                                  context,
+                                  PageTransition(
+                                      child: day19(),
+                                      type: PageTransitionType.fade));
+                            },
+                            icon: Icon(Icons.arrow_back_ios,
+                                color: Colors.white)),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          children: [
+                            IconButton(
+                                onPressed: () {},
+                                icon:
+                                    Icon(Icons.favorite, color: Colors.white)),
+                            IconButton(
+                                onPressed: () {},
+                                icon: Icon(Icons.shopping_bag,
+                                    color: Colors.white)),
+                          ],
+                        )
                       ],
-                    )
+                    ),
                   ],
                 ),
               ),
