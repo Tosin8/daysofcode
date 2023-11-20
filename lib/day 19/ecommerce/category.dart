@@ -95,9 +95,19 @@ class _CategoryState extends State<Category> {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.all(2),
+              padding: const EdgeInsets.all(20),
               child: Column(
-                children: [Text('New Product')],
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text('New Product'),
+                      Row(
+                        children: [Text('View More')],
+                      )
+                    ],
+                  )
+                ],
               ),
             ),
           ],
