@@ -87,7 +87,9 @@ class Shop extends StatelessWidget {
                 ),
               ),
             ),
-          )
+          ),
+          SizedBox(height: 30),
+          Text('Categories')
         ],
       ),
     );
