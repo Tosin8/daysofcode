@@ -100,6 +100,8 @@ flutter:
     - assets/ecommerce/3.jpg
     - assets/ecommerce/4.jpg
     - assets/ecommerce/5.jpg
+    - assets/ecommerce/6.jpg
+    - assets/ecommerce/7.jpg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
   # For details regarding adding assets from package dependencies, see

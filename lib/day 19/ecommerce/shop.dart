@@ -110,7 +110,12 @@ class Shop extends StatelessWidget {
                     height: 150,
                     child: ListView(
                       scrollDirection: Axis.horizontal,
-                      children: [],
+                      children: [
+                        makeCategory('assets/ecommerce/4.jpg', 'Shoes'),
+                        makeCategory('assets/ecommerce/5.jpg', 'Clothes'),
+                        makeCategory('assets/ecommerce/7.jpg', 'Perfume'),
+                        makeCategory('assets/ecommerce/6.jpg', 'Beauty')
+                      ],
                     ),
                   ),
                 ],
@@ -127,9 +132,8 @@ class Shop extends StatelessWidget {
         margin: const EdgeInsets.only(right: 20),
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10),
-            image: DecorationImage(
-                image: AssetImage('assets/ecommerce/4.jpg'),
-                fit: BoxFit.cover)),
+            image:
+                DecorationImage(image: AssetImage(image), fit: BoxFit.cover)),
         child: Container(
           padding: EdgeInsets.all(10),
           decoration: BoxDecoration(
@@ -142,7 +146,7 @@ class Shop extends StatelessWidget {
           child: Align(
             alignment: Alignment.bottomLeft,
             child: Text(
-              'Shoes',
+              title,
               style: TextStyle(
                   fontWeight: FontWeight.w500,
                   color: Colors.white,
