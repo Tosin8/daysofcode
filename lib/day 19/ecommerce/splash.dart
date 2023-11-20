@@ -5,6 +5,11 @@ class day19 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+        body: Container(
+      decoration: BoxDecoration(
+          image: DecorationImage(
+              image: AssetImage('assets/ecommerce/2.jpg'), fit: BoxFit.cover)),
+    ));
   }
 }
