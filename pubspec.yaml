@@ -95,6 +95,11 @@ flutter:
     - assets/movie_app/hollywood.jpg
     - assets/movie_app/hustle.jpg
     - assets/movie_app/joker.jpg
+    - assets/ecommerce/1.jpg
+    - assets/ecommerce/2.jpg
+    - assets/ecommerce/3.jpg
+    - assets/ecommerce/4.jpg
+    - assets/ecommerce/5.jpg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
   # For details regarding adding assets from package dependencies, see
