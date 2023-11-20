@@ -49,9 +49,10 @@ class _day19State extends State<day19> with TickerProviderStateMixin {
               image: AssetImage('assets/ecommerce/2.jpg'), fit: BoxFit.cover)),
       child: Container(
         decoration: BoxDecoration(
-          gradient: LinearGradient(
-              colors: [Colors.grey.withOpacity(0.4), Colors.black38],
-              begin: Alignment.topCenter),
+          gradient: LinearGradient(colors: [
+            Colors.black.withOpacity(0.4),
+            Colors.black.withOpacity(0.4)
+          ], begin: Alignment.bottomRight),
         ),
         child: Padding(
           padding: const EdgeInsets.all(30.0),
