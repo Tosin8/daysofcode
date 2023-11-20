@@ -61,11 +61,11 @@ class Shop extends StatelessWidget {
                       ],
                     ),
                     Padding(
-                      padding: EdgeInsets.all(20.0),
+                      padding: const EdgeInsets.all(20.0),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text(
+                          const Text(
                             'Our New \nProducts',
                             style: TextStyle(
                                 color: Colors.white,
@@ -73,7 +73,7 @@ class Shop extends StatelessWidget {
                                 fontWeight: FontWeight.bold,
                                 letterSpacing: 2.0),
                           ),
-                          SizedBox(height: 10),
+                          const SizedBox(height: 10),
                           Text(
                             'View More >>',
                             style: TextStyle(
@@ -88,8 +88,38 @@ class Shop extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(height: 30),
-          Text('Categories')
+          Container(
+              padding: const EdgeInsets.all(20),
+              child: Column(
+                children: [
+                  const Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        'Categories',
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 20,
+                            letterSpacing: 1.0),
+                      ),
+                      Text('See All'),
+                    ],
+                  ),
+                  const SizedBox(height: 20),
+                  Container(
+                    height: 100,
+                    child: ListView(
+                      scrollDirection: Axis.horizontal,
+                      children: [
+                        AspectRatio(
+                          aspectRatio: 2 / 1,
+                          child: Container(),
+                        )
+                      ],
+                    ),
+                  ),
+                ],
+              ))
         ],
       ),
     );
