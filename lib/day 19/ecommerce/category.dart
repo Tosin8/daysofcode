@@ -123,7 +123,19 @@ class _CategoryState extends State<Category> {
                   makeProduct(
                       image: 'assets/ecommerce/shoes/1.jpg',
                       title: 'Shoes',
-                      price: '100')
+                      price: '100'),
+                  makeProduct(
+                      image: 'assets/ecommerce/shoes/2.jpg',
+                      title: 'Shoes',
+                      price: '100'),
+                  makeProduct(
+                      image: 'assets/ecommerce/shoes/3.jpg',
+                      title: 'Shoes',
+                      price: '100'),
+                  makeProduct(
+                      image: 'assets/ecommerce/shoes/4.jpg',
+                      title: 'Shoes',
+                      price: '100'),
                 ],
               ),
             ),
@@ -136,6 +148,7 @@ class _CategoryState extends State<Category> {
   Widget makeProduct({image, title, price}) {
     return Container(
         height: 200,
+        margin: EdgeInsets.only(bottom: 20),
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10),
             image:
@@ -143,10 +156,11 @@ class _CategoryState extends State<Category> {
         child: Container(
           padding: EdgeInsets.all(10),
           decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(10),
               gradient: LinearGradient(colors: [
-            Colors.black.withOpacity(.8),
-            Colors.black.withOpacity(.1)
-          ], begin: Alignment.bottomRight)),
+                Colors.black.withOpacity(.8),
+                Colors.black.withOpacity(.1)
+              ], begin: Alignment.bottomRight)),
         ));
   }
 }
