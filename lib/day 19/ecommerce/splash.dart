@@ -7,6 +7,7 @@ class day19 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Container(
+      width: double.infinity,
       decoration: BoxDecoration(
           image: DecorationImage(
               image: AssetImage('assets/ecommerce/2.jpg'), fit: BoxFit.cover)),
@@ -15,6 +16,9 @@ class day19 extends StatelessWidget {
           gradient: LinearGradient(
               colors: [Colors.grey.withOpacity(0.4), Colors.black38],
               begin: Alignment.topCenter),
+        ),
+        child: Column(
+          children: [Text('Brand New Perspective')],
         ),
       ),
     ));
