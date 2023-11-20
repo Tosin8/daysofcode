@@ -2,6 +2,7 @@ import 'package:daysofcode/day%207/food_restuarant.dart';
 import 'package:flutter/material.dart';
 
 import 'day 18/movie_ui/day_18.dart';
+import 'day 19/ecommerce/splash.dart';
 import 'day 8/day8.dart';
 
 void main() {
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: day18(),
+      home: day19(),
     );
   }
 }
