@@ -8,6 +8,8 @@ class day19 extends StatefulWidget {
 }
 
 class _day19State extends State<day19> {
+  AnimationController _scaleController;
+  Animation<double> _scaleAnimation;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
