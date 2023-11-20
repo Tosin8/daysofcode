@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
 
-class day19 extends StatelessWidget {
+class day19 extends StatefulWidget {
   const day19({super.key});
 
+  @override
+  State<day19> createState() => _day19State();
+}
+
+class _day19State extends State<day19> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,7 +31,7 @@ class day19 extends StatelessWidget {
               const Text(
                 'Brand New Perspective',
                 style: TextStyle(
-                    fontSize: 30,
+                    fontSize: 32,
                     color: Colors.white,
                     fontWeight: FontWeight.bold,
                     letterSpacing: 1.5),
@@ -39,7 +44,7 @@ class day19 extends StatelessWidget {
                     fontSize: 18,
                     fontWeight: FontWeight.w300),
               ),
-              const SizedBox(height: 12),
+              const SizedBox(height: 40),
               Container(
                 height: 50,
                 width: double.infinity,
