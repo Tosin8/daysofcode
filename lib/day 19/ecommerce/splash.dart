@@ -8,7 +8,7 @@ class day19 extends StatelessWidget {
     return Scaffold(
         body: Container(
       width: double.infinity,
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
           image: DecorationImage(
               image: AssetImage('assets/ecommerce/2.jpg'), fit: BoxFit.cover)),
       child: Container(
@@ -25,14 +25,43 @@ class day19 extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
-              Text(
+              const Text(
                 'Brand New Perspective',
                 style: TextStyle(
                     fontSize: 30,
                     color: Colors.white,
                     fontWeight: FontWeight.bold,
                     letterSpacing: 1.5),
-              )
+              ),
+              const SizedBox(height: 12),
+              const Text(
+                'Let\'s start with your summer collection',
+                style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 18,
+                    fontWeight: FontWeight.w300),
+              ),
+              const SizedBox(height: 12),
+              Container(
+                height: 50,
+                width: double.infinity,
+                decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(30)),
+                child: const Align(
+                    alignment: Alignment.center, child: Text('Start Shopping')),
+              ),
+              const SizedBox(height: 12),
+              Container(
+                height: 50,
+                width: double.infinity,
+                decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(30)),
+                child: const Align(
+                    alignment: Alignment.center, child: Text('Create Account')),
+              ),
+              const SizedBox(height: 30),
             ],
           ),
         ),
