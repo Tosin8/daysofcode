@@ -60,7 +60,7 @@ class Shop extends StatelessWidget {
                         ),
                       ],
                     ),
-                    const Padding(
+                    Padding(
                       padding: EdgeInsets.all(20.0),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -75,8 +75,10 @@ class Shop extends StatelessWidget {
                           ),
                           SizedBox(height: 10),
                           Text(
-                            'View More',
-                            style: TextStyle(fontSize: 18, color: Colors.white),
+                            'View More >>',
+                            style: TextStyle(
+                                fontSize: 18,
+                                color: Colors.white.withOpacity(0.9)),
                           )
                         ],
                       ),
