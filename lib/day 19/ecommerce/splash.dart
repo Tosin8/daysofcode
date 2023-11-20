@@ -18,12 +18,10 @@ class day19 extends StatelessWidget {
               begin: Alignment.topCenter),
         ),
         child: Padding(
-          padding: const EdgeInsets.only(
-            left: 20,
-            right: 120,
-          ),
+          padding: const EdgeInsets.all(30.0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.end,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const Text(
                 'Brand New Perspective',
@@ -35,7 +33,7 @@ class day19 extends StatelessWidget {
               ),
               const SizedBox(height: 12),
               const Text(
-                'Let\'s start with your summer collection',
+                'Let\'s start with your summer\ncollection',
                 style: TextStyle(
                     color: Colors.white,
                     fontSize: 18,
@@ -49,17 +47,26 @@ class day19 extends StatelessWidget {
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(30)),
                 child: const Align(
-                    alignment: Alignment.center, child: Text('Start Shopping')),
+                    alignment: Alignment.center,
+                    child: Text(
+                      'Start Shopping',
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    )),
               ),
               const SizedBox(height: 12),
               Container(
                 height: 50,
                 width: double.infinity,
                 decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(30)),
+                    borderRadius: BorderRadius.circular(30),
+                    border: Border.all(color: Colors.white)),
                 child: const Align(
-                    alignment: Alignment.center, child: Text('Create Account')),
+                    alignment: Alignment.center,
+                    child: Text(
+                      'Create Account',
+                      style: TextStyle(
+                          color: Colors.white, fontWeight: FontWeight.bold),
+                    )),
               ),
               const SizedBox(height: 30),
             ],
