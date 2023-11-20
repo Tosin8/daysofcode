@@ -114,12 +114,18 @@ class Shop extends StatelessWidget {
                       child: ListView(
                         scrollDirection: Axis.horizontal,
                         children: [
-                          makeCategory('assets/ecommerce/4.jpg', 'Shoes'),
-                          makeCategory('assets/ecommerce/5.jpg', 'Clothes'),
-                          makeCategory('assets/ecommerce/7.jpg', 'Fragrance'),
-                          makeCategory('assets/ecommerce/6.jpg', 'Beauty'),
-                          makeCategory('assets/ecommerce/8.jpg', 'Styling'),
-                          makeCategory('assets/ecommerce/9.jpg', 'Bags'),
+                          makeCategory(
+                              'assets/ecommerce/4.jpg', 'Shoes', 'shoes'),
+                          makeCategory(
+                              'assets/ecommerce/5.jpg', 'Clothes', 'clothes'),
+                          makeCategory('assets/ecommerce/7.jpg', 'Fragrance',
+                              'fragrance'),
+                          makeCategory(
+                              'assets/ecommerce/6.jpg', 'Beauty', 'beauty'),
+                          makeCategory(
+                              'assets/ecommerce/8.jpg', 'Styling', 'styling'),
+                          makeCategory(
+                              'assets/ecommerce/9.jpg', 'Bags', 'bags'),
                         ],
                       ),
                     ),
@@ -166,6 +172,7 @@ class Shop extends StatelessWidget {
     return AspectRatio(
       aspectRatio: 2 / 2,
       child: Hero(
+        tag: tag,
         child: GestureDetector(
           onTap: () {
             Navigator.push(
