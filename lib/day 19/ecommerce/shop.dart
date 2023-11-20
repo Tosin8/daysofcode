@@ -60,16 +60,23 @@ class Shop extends StatelessWidget {
                         ),
                       ],
                     ),
-                    Padding(
-                      padding: const EdgeInsets.all(20.0),
+                    const Padding(
+                      padding: EdgeInsets.all(20.0),
                       child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            'Our New Products',
+                            'Our New \nProducts',
                             style: TextStyle(
                                 color: Colors.white,
-                                fontSize: 30,
-                                fontWeight: FontWeight.bold),
+                                fontSize: 40,
+                                fontWeight: FontWeight.bold,
+                                letterSpacing: 2.0),
+                          ),
+                          SizedBox(height: 10),
+                          Text(
+                            'View More',
+                            style: TextStyle(fontSize: 18, color: Colors.white),
                           )
                         ],
                       ),
