@@ -103,7 +103,13 @@ class _CategoryState extends State<Category> {
                     children: [
                       Text('New Product'),
                       Row(
-                        children: [Text('View More')],
+                        children: [
+                          Text('View More'),
+                          SizedBox(width: 5),
+                          IconButton(
+                              onPressed: () {},
+                              icon: Icon(Icons.arrow_forward_ios, size: 11))
+                        ],
                       )
                     ],
                   )
